@@ -13,7 +13,7 @@ import javax.ws.rs.core.Response;
 import org.apache.cxf.jaxrs.model.wadl.Description;
 
 @Path("/hello")
-public class HelloWorld {
+public class ServiceSoapClient {
 
     @GET
     @Path("/regard/{input}")

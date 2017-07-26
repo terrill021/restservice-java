@@ -5,9 +5,10 @@
     <context:annotation-config/>
     <bean class="org.springframework.web.context.support.ServletContextPropertyPlaceholderConfigurer"/>
     <bean class="org.springframework.beans.factory.config.PreferencesPlaceholderConfigurer"/>
+    
     <jaxrs:server id="services" address="/">
         <jaxrs:serviceBeans>
-            <bean class="com.open.serviciorest_jaxrs.HelloWorld"/>
+            <bean class="com.open.serviciorest_jaxrs.ServiceSoapClient"/>
         </jaxrs:serviceBeans>
         <jaxrs:providers>
             <bean class="org.codehaus.jackson.jaxrs.JacksonJsonProvider"/>
@@ -18,4 +19,5 @@
 			</bean>
         </jaxrs:providers>
     </jaxrs:server>
+    
 </beans>

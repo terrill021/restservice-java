@@ -20,5 +20,5 @@ public class JsonBean {
     public void setVal2(String val2) {
         this.val2 = val2;
     }
-
+    
 }
