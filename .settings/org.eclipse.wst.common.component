@@ -3,6 +3,15 @@
         <wb-resource deploy-path="/" source-path="/target/m2e-wtp/web-resources"/>
         <wb-resource deploy-path="/" source-path="/src/main/webapp" tag="defaultRootSource"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/java"/>
+        <dependent-module archiveName="openintl.crud-interface-1.0.0.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/openintl-repository/openintl-repository">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="openintl-mongodbdriver-1.0.0.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/MongoDBDriver/MongoDBDriver">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="openintl-common-repository-1.0.0-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/openintl-common-repository/openintl-common-repository">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
         <property name="java-output-path" value="/serviciorest-jaxrs/target/classes"/>
         <property name="context-root" value="openintl-ois"/>
     </wb-module>

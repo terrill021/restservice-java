@@ -5,7 +5,7 @@
     <context:annotation-config/>
     <bean class="org.springframework.web.context.support.ServletContextPropertyPlaceholderConfigurer"/>
     <bean class="org.springframework.beans.factory.config.PreferencesPlaceholderConfigurer"/>
-    
+    <bean class="com.openintl.api.ois.config.impl.OisConfig"></bean>
     <jaxrs:server id="services" address="/">
         <jaxrs:serviceBeans>
             <bean class="com.openintl.api.ois.impl.ServiceSoapClient"/>
