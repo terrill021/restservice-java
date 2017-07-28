@@ -1,4 +1,4 @@
-package com.open.serviciorest_jaxrs;
+package com.openintl.api.ois;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -12,22 +12,24 @@ import javax.ws.rs.core.Response;
 
 import org.apache.cxf.jaxrs.model.wadl.Description;
 
-@Path("/hello")
+import com.open.serviciorest_jaxrs.JsonBean;
+
+@Path("/consumers/soap")
 public class ServiceSoapClient {
 
     @GET
-    @Path("/regard/{input}")
-    @Produces({"application/xml", "application/json"})
+    @Path("/{_id}")
+    @Produces({"application/json"})
     @Description("Descripción: obtener objetos ...")
-    public String ping(@PathParam("input") String input) {    	
-        return "Regards " + input + "!!!";
+    public String getSoapClientById(@PathParam("_id") String _id) {    	
+        return "Regards " + _id+ "!!!";
     }
     
     @GET
-    @Path("/objects")
+    @Path("/")
     @Produces({"application/xml", "application/json"})
     @Description("Descripción: obtener objetos ...")
-    public List<String> objects() {
+    public List<String> getAllSoapClients() {
     	
     	List<String> lista =  new ArrayList<String>();
     	lista.add("Objeto 1");
@@ -41,8 +43,8 @@ public class ServiceSoapClient {
     @POST
     @Produces("application/json")
     @Consumes("application/json")
-    @Path("/jsonBean")
-    public Response modifyJson(JsonBean input) {
+    @Path("/")
+    public Response generateNewSoapClient(JsonBean input) {
         input.setVal2(input.getVal1());
         return Response.ok().entity(input).build();
     }

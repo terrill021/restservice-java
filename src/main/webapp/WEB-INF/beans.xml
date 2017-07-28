@@ -8,7 +8,7 @@
     
     <jaxrs:server id="services" address="/">
         <jaxrs:serviceBeans>
-            <bean class="com.open.serviciorest_jaxrs.ServiceSoapClient"/>
+            <bean class="com.openintl.api.ois.ServiceSoapClient"/>
         </jaxrs:serviceBeans>
         <jaxrs:providers>
             <bean class="org.codehaus.jackson.jaxrs.JacksonJsonProvider"/>
