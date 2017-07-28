@@ -1,4 +1,4 @@
-package com.open.serviciorest_jaxrs;
+package com.openintl.api.ois.entities;
 
 
 public class JsonBean {
@@ -13,6 +13,7 @@ public class JsonBean {
         this.val1 = val1;
     }
 
+    
     public String getVal2() {
         return val2;
     }

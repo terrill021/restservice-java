@@ -15,6 +15,8 @@ import org.codehaus.jackson.map.MappingJsonFactory;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
+import com.openintl.api.ois.entities.JsonBean;
+
 public class HelloWorldIT {
     private static String endpointUrl;
 
